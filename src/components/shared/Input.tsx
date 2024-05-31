@@ -6,11 +6,14 @@ const Input = styled.input`
   font-size: 15px;
   height: 48px;
   font-weight: 500;
-  border: 1px solid ${colors.grey};
+  border: 1px solid ${colors.borderGray};
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
 
+  ::placeholder {
+    font-size: 12px;
+  }
   &:focus {
     border-color: ${colors.blue};
     outline: none;

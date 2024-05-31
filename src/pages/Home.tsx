@@ -1,7 +1,7 @@
 import AdBanners from '@components/home/AdBanners'
 import Top from '@components/shared/Top'
 import { useEffect } from 'react'
-import CardList from './CardList'
+import CardList from '../components/home/CardList'
 
 const Home = () => {
   useEffect(() => {

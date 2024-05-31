@@ -28,7 +28,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       setFocused(false)
       onBlur?.(event)
     }
-    const labelColor = hasError ? 'red' : focused ? 'blue' : 'grey'
+    const labelColor = hasError ? 'red' : focused ? 'blue' : 'textGray'
 
     return (
       <div>
@@ -37,7 +37,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             typography="t7"
             color={labelColor}
             display="inline-block"
-            style={{ marginBottom: 6 }}
+            style={{ marginBottom: 4 }}
           >
             {label}
           </Text>
