@@ -1,4 +1,4 @@
-import { Typography, typographyMap } from '@/styles/typography'
+import { Typography, typographyMap } from '@styles/typography'
 import styled from '@emotion/styled'
 import { colors, Colors } from '@styles/colorPalette'
 import { CSSProperties } from 'react'

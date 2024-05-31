@@ -1,8 +1,13 @@
 import { css } from '@emotion/react'
 import { colorPalette } from './colorPalette'
 
-export const globalStyle = css`
+export default css`
   ${colorPalette}
+
+  :root {
+    --dimmed-zindex: 10;
+    --alert-zindex: 11;
+  }
 
   html,
   body,
@@ -134,18 +139,13 @@ export const globalStyle = css`
     padding: 0;
     width: auto;
     overflow: visible;
-
     background: transparent;
-
-    /* inherit font & color from ancestor */
     color: inherit;
     font: inherit;
-
     line-height: normal;
-
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-
-    -webkit-appearance: none;
+  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
   }
 `
