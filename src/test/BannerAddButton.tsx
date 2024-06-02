@@ -1,5 +1,5 @@
 import Button from '@components/shared/Button'
-import { COLLECTIONS } from '@constants'
+import { COLLECTIONS } from '@constants/index'
 import { adBanners } from '@mock/data'
 import { store } from '@remote/firebase'
 import { collection, doc, writeBatch } from 'firebase/firestore'

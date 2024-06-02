@@ -9,7 +9,7 @@
       "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@remote/*": ["src/remote/*"],
-      "@constants": ["src/constants/index"],
+      "@constants/*": ["src/constants/*"],
       "@test/*": ["src/test/*"],
       "@mock/*": ["src/mock/*"],
       "@atoms/*": ["src/atoms/*"],

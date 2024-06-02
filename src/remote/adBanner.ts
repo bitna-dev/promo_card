@@ -1,4 +1,4 @@
-import { COLLECTIONS } from '@constants'
+import { COLLECTIONS } from '@constants/index'
 import { AdBanners } from '@models/banner'
 import { collection, getDocs } from 'firebase/firestore'
 import { store } from './firebase'

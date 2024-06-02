@@ -31,7 +31,11 @@ const Navbar = () => {
 
   const renderButton = useCallback(() => {
     if (user != null) {
-      return <Button onClick={handleLogout}>로그아웃</Button>
+      return (
+        <Button weak onClick={handleLogout} style={{ border: 'none' }}>
+          로그아웃
+        </Button>
+      )
     }
     if (showSignButton) {
       return (

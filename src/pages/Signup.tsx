@@ -1,5 +1,5 @@
 import Form from '@components/signup/Form'
-import { COLLECTIONS } from '@constants'
+import { COLLECTIONS } from '@constants/index'
 import { FormValues } from '@models/signup'
 import { auth, store } from '@remote/firebase'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'

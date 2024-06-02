@@ -1,4 +1,4 @@
-import { COLLECTIONS } from '@constants'
+import { COLLECTIONS } from '@constants/index'
 import { Card } from '@models/card'
 import {
   collection,
