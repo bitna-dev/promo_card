@@ -36,6 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:16.18.97"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/validator", "npm:13.11.10"],\
           ["craco-alias", "npm:3.0.1"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:9.1.0"],\
@@ -54,8 +55,10 @@ const RAW_RUNTIME_STATE =
           ["react-scripts", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:5.0.1"],\
           ["react-spinners", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:0.13.8"],\
           ["react-toastify", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:10.0.5"],\
+          ["recoil", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:0.7.7"],\
           ["swiper", "npm:9.4.1"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
+          ["validator", "npm:13.12.0"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
         "linkType": "SOFT"\
@@ -6464,6 +6467,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/validator", [\
+      ["npm:13.11.10", {\
+        "packageLocation": "../../../.yarn/berry/cache/@types-validator-npm-13.11.10-2fc6610ef6-10c0.zip/node_modules/@types/validator/",\
+        "packageDependencies": [\
+          ["@types/validator", "npm:13.11.10"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/ws", [\
       ["npm:8.5.10", {\
         "packageLocation": "../../../.yarn/berry/cache/@types-ws-npm-8.5.10-a877a38f71-10c0.zip/node_modules/@types/ws/",\
@@ -11470,6 +11482,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["gzip-size", "npm:6.0.0"],\
           ["duplexer", "npm:0.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["hamt_plus", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../../.yarn/berry/cache/hamt_plus-npm-1.0.2-67a52ee1df-10c0.zip/node_modules/hamt_plus/",\
+        "packageDependencies": [\
+          ["hamt_plus", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16676,6 +16697,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:16.18.97"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/validator", "npm:13.11.10"],\
           ["craco-alias", "npm:3.0.1"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:9.1.0"],\
@@ -16694,8 +16716,10 @@ const RAW_RUNTIME_STATE =
           ["react-scripts", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:5.0.1"],\
           ["react-spinners", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:0.13.8"],\
           ["react-toastify", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:10.0.5"],\
+          ["recoil", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:0.7.7"],\
           ["swiper", "npm:9.4.1"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
+          ["validator", "npm:13.12.0"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
         "linkType": "SOFT"\
@@ -17272,6 +17296,37 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["readdirp", "npm:3.6.0"],\
           ["picomatch", "npm:2.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["recoil", [\
+      ["npm:0.7.7", {\
+        "packageLocation": "../../../.yarn/berry/cache/recoil-npm-0.7.7-4452f58b67-10c0.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "npm:0.7.7"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:0.7.7", {\
+        "packageLocation": "./.yarn/__virtual__/recoil-virtual-03363b0387/4/.yarn/berry/cache/recoil-npm-0.7.7-4452f58b67-10c0.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:0.7.7"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/react-native", null],\
+          ["hamt_plus", "npm:1.0.2"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:8e7c89b151653b53a5ad955fa93e9a0d3037a1354e4680f5fa2e62a8b57f4e91e9dd1427c6dd09d4c7b1b800853c04c498aa41365c5b6152f0c9b825abec8ae4#npm:18.3.1"],\
+          ["react-native", null]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react-native",\
+          "@types/react",\
+          "react-dom",\
+          "react-native",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19504,6 +19559,15 @@ const RAW_RUNTIME_STATE =
           ["@types/istanbul-lib-coverage", "npm:2.0.6"],\
           ["convert-source-map", "npm:1.9.0"],\
           ["source-map", "npm:0.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["validator", [\
+      ["npm:13.12.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/validator-npm-13.12.0-6c8a423cbf-10c0.zip/node_modules/validator/",\
+        "packageDependencies": [\
+          ["validator", "npm:13.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\

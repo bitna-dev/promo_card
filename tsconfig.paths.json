@@ -11,7 +11,9 @@
       "@remote/*": ["src/remote/*"],
       "@constants": ["src/constants/index"],
       "@test/*": ["src/test/*"],
-      "@mock/*": ["src/mock/*"]
+      "@mock/*": ["src/mock/*"],
+      "@atoms/*": ["src/atoms/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   }
 }

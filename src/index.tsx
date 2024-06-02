@@ -8,6 +8,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import AuthGuard from '@components/auth/AuthGuard'
+import { RecoilRoot } from 'recoil'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 const client = new QueryClient({
@@ -17,12 +19,16 @@ root.render(
   <>
     <Router>
       <Global styles={globalStyle} />
-      <ToastContainer autoClose={1500} />
-      <QueryClientProvider client={client}>
-        <AlertContextProvider>
-          <App />
-        </AlertContextProvider>
-      </QueryClientProvider>
+      <RecoilRoot>
+        <ToastContainer autoClose={1500} />
+        <QueryClientProvider client={client}>
+          <AlertContextProvider>
+            <AuthGuard>
+              <App />
+            </AuthGuard>
+          </AlertContextProvider>
+        </QueryClientProvider>
+      </RecoilRoot>
     </Router>
   </>,
 )

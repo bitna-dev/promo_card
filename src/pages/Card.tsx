@@ -1,16 +1,38 @@
+import Alert from '@components/shared/Alert'
 import FixedBottomButton from '@components/shared/FixedBottomButton'
 import Flex from '@components/shared/Flex'
 import ListRow from '@components/shared/ListRow'
 import Text from '@components/shared/Text'
 import Top from '@components/shared/Top'
+import { useAlertContext } from '@contexts/AlertContext'
 import { css } from '@emotion/react'
+import useUser from '@hooks/auth/useUser'
 import { getCard } from '@remote/card'
 import { motion } from 'framer-motion'
+import { useCallback } from 'react'
 import { useQuery } from 'react-query'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams, useLocation } from 'react-router-dom'
 
 const CardPage = () => {
   const { id = '' } = useParams()
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+  const user = useUser()
+  const { open } = useAlertContext()
+  const moveToApply = useCallback(() => {
+    if (!user) {
+      open({
+        title: '알림',
+        desc: '로그인이 필요한 기능입니다.',
+        onButtonClick: () => {
+          console.log(pathname)
+          navigate('/login', { state: pathname })
+        },
+      })
+    }
+
+    return navigate(`/apply/:${id}`)
+  }, [navigate, user, id, open, pathname])
 
   //card와 id를 같이 묶어서 캐시 키를 만듦
   const { data } = useQuery(['card', id], () => getCard(id), {
@@ -23,6 +45,7 @@ const CardPage = () => {
   const { name, corpName, promotion, tags, benefit } = data
   const subTitle =
     promotion != null ? removeHTMLTags(promotion.title) : tags.join(', ')
+
   return (
     <div>
       <Top title={`${corpName} ${name}`} subTitle={subTitle} />
@@ -30,6 +53,7 @@ const CardPage = () => {
         {benefit.map((item, idx) => {
           return (
             <motion.li
+              key={idx}
               initial={{
                 opacity: 0,
                 translateX: -90,
@@ -63,7 +87,7 @@ const CardPage = () => {
           <Text typography="t8">{removeHTMLTags(promotion.terms)}</Text>
         </Flex>
       )}
-      <FixedBottomButton label="신청하기" onClick={() => {}} />
+      <FixedBottomButton label="신청하기" onClick={moveToApply} />
     </div>
   )
 }

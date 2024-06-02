@@ -9,7 +9,7 @@ interface AlertProps {
   open?: boolean
   title: React.ReactNode
   desc?: React.ReactNode
-  buttonLabel?: string
+  buttonLabel?: React.ReactNode
   onButtonClick: () => void
 }
 
@@ -17,7 +17,7 @@ const Alert = ({
   open,
   title,
   desc,
-  buttonLabel,
+  buttonLabel = '확인',
   onButtonClick,
 }: AlertProps) => {
   if (open === false) {
