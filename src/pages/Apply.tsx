@@ -6,7 +6,7 @@ import Loader from '@components/shared/Loader'
 import useUser from '@hooks/auth/useUser'
 import { APPLY_STATUS } from '@models/apply'
 import { updateApplyCard } from '@remote/apply'
-import { replace } from 'lodash'
+
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
