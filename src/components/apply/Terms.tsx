@@ -1,9 +1,14 @@
 import Agreement from '@components/shared/Agreement'
 import FixedBottomButton from '@components/shared/FixedBottomButton'
 import { termList } from '@constants/apply'
+import { ApplyValues } from '@models/apply'
 import { MouseEvent, useCallback, useState } from 'react'
 
-const Terms = ({ onNext }: { onNext: (terms: string[]) => void }) => {
+const Terms = ({
+  onNext,
+}: {
+  onNext: (terms: ApplyValues['terms']) => void
+}) => {
   const [termsAgreement, setTermsAgreement] = useState(() => {
     return termList.reduce<Record<string, boolean>>(
       (prev, term) => ({
@@ -29,7 +34,7 @@ const Terms = ({ onNext }: { onNext: (terms: string[]) => void }) => {
     [],
   )
   return (
-    <div>
+    <>
       <Agreement>
         <Agreement.Title onChange={handleAllAgreement} checked={agreedAllTerms}>
           약관에 모두 동의
@@ -59,7 +64,7 @@ const Terms = ({ onNext }: { onNext: (terms: string[]) => void }) => {
           onNext(Object.keys(termsAgreement))
         }}
       />
-    </div>
+    </>
   )
 }
 

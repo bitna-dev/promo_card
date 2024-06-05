@@ -21,7 +21,7 @@ const AuthGuard = ({ children }: { children: React.ReactNode }) => {
     setInit(true)
   })
   if (init === false) {
-    return <Loader />
+    return <Loader full />
   }
   return <>{children}</>
 }

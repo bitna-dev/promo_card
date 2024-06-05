@@ -1,6 +1,7 @@
 import PrivateRoute from '@components/auth/PrivateRoute'
 import Navbar from '@components/shared/Navbar'
 import ApplyPage from '@pages/Apply'
+import ApplyDone from '@pages/ApplyDone'
 import CardPage from '@pages/Card'
 import Home from '@pages/Home'
 import Login from '@pages/Login'
@@ -22,6 +23,14 @@ function App() {
           element={
             <PrivateRoute>
               <ApplyPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/apply/done"
+          element={
+            <PrivateRoute>
+              <ApplyDone />
             </PrivateRoute>
           }
         />

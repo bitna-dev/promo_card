@@ -7,7 +7,7 @@ export interface Term {
 }
 
 export const APPLY_STATUS = {
-  REDAY: 'REDAY',
+  READY: 'READY',
   PROGRESS: 'PROGRESS',
   COMPLETE: 'COMPLETE',
   REJECT: 'REJECT',
@@ -21,9 +21,9 @@ export interface ApplyValues {
   salary: string
   credit: string
   payDate: string
-  isMaster: boolean
-  isHipass: boolean
-  isRf: boolean
+  isMaster: boolean | undefined
+  isHipass: boolean | undefined
+  isRf: boolean | undefined
   status: keyof typeof APPLY_STATUS
   step: number
 }

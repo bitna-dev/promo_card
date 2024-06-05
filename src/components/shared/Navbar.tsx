@@ -54,7 +54,7 @@ const Navbar = () => {
     <Flex justify="space-between" align="center" css={NavbarContainerStyles}>
       <Link to="/">
         <Text color="black" bold>
-          Promo Card
+          Promo
         </Text>
       </Link>
       {renderButton()}

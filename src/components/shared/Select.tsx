@@ -20,6 +20,7 @@ const BaseSelect = styled.select`
   &:disabled {
     color: ${colors.red};
   }
+  border-right: 16px solid transparent;
 `
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
@@ -40,7 +41,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
       ) : null}
       <BaseSelect ref={ref} required value={value} {...props}>
         <option disabled hidden value="">
-          {options[0].label}
+          {defaultValue}
         </option>
         {options.map(({ label, value }) => (
           <option key={label} value={value}>
@@ -51,4 +52,5 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
     </Flex>
   )
 })
+
 export default Select
